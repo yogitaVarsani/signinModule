@@ -31,10 +31,10 @@ class _ForgotPassPageState extends State<ForgotPassPage> {
         color: Colors.white,
         child: Stack(
           children: [
-            Align(
+           /* Align(
               alignment: Alignment.topRight,
               child: Image.asset('assets/images/background.png'),
-            ),
+            ),*/
             Padding(
               padding: const EdgeInsets.only(
                   top: 10.0, bottom: 60, left: 20.0, right: 20.0),
@@ -47,13 +47,13 @@ class _ForgotPassPageState extends State<ForgotPassPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: const [
                       Text(
-                        'Forgot',
+                        'Forgot Password',
                         style: TextStyle(fontSize: 50.0),
                       ),
-                      Text(
+                      /*Text(
                         'Password',
                         style: TextStyle(fontSize: 50.0),
-                      ),
+                      ),*/
                     ],
                   ),
                   Padding(
@@ -63,13 +63,13 @@ class _ForgotPassPageState extends State<ForgotPassPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Text(
-                          'Please',
+                          'Please enter your email',
                           style: TextStyle(fontSize: 30.0),
                         ),
-                        Text(
+                        /*Text(
                           'enter your email.',
                           style: TextStyle(fontSize: 30.0),
-                        ),
+                        ),*/
                       ],
                     ),
                   ),

@@ -38,16 +38,16 @@ class _LoginPageState extends State<LoginPage> {
         color: Colors.white,
         child: Stack(
           children: [
-            Align(
+            /*Align(
               alignment: Alignment.topRight,
-              child: Image.asset('assets/images/background.png'),
-            ),
+              child: Image.network('https://i.pinimg.com/550x/b7/a3/2f/b7a32fed76962c5d4252bde775943ba6.jpg'),
+            ),*/
             Padding(
               padding: const EdgeInsets.only(
                   top: 10.0, bottom: 60.0, left: 20.0, right: 20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   const Text(
                     'Login',
@@ -57,13 +57,13 @@ class _LoginPageState extends State<LoginPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       Text(
-                        'Please login',
+                        'Please login to your account',
                         style: TextStyle(fontSize: 30.0),
                       ),
-                      Text(
+                     /* Text(
                         'to your account',
                         style: TextStyle(fontSize: 30.0),
-                      ),
+                      ),*/
                     ],
                   ),
                   Form(

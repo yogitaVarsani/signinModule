@@ -1,9 +1,11 @@
 import 'package:authmodule/main_screen/LoginPage.dart';
 import 'package:flutter/material.dart';
-import 'package:modal_progress_hud/modal_progress_hud.dart' show ModalProgressHUD;
+import 'package:modal_progress_hud/modal_progress_hud.dart'
+    show ModalProgressHUD;
 
 class RegisterPage extends StatefulWidget {
   static String id = '/RegisterPage';
+
   @override
   _RegisterPageState createState() => _RegisterPageState();
 }
@@ -14,7 +16,6 @@ class _RegisterPageState extends State<RegisterPage> {
   String emailText = 'Email doesn\'t match';
   String passwordText = 'Password doesn\'t match';
   var _formKey = GlobalKey<FormState>();
-  bool _showSpinner = false;
 
   void _submit() {
     final isValid = _formKey.currentState?.validate();
@@ -33,10 +34,10 @@ class _RegisterPageState extends State<RegisterPage> {
         color: Colors.white,
         child: Stack(
           children: [
-            Align(
+            /*Align(
               alignment: Alignment.topRight,
               child: Image.asset('assets/images/background.png'),
-            ),
+            ),*/
             Padding(
               padding: const EdgeInsets.only(
                   top: 10.0, bottom: 60, left: 20.0, right: 20.0),
@@ -52,13 +53,13 @@ class _RegisterPageState extends State<RegisterPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       Text(
-                        'Please register',
+                        'Please register to your account',
                         style: TextStyle(fontSize: 30.0),
                       ),
-                      Text(
+                      /*Text(
                         'to your account',
                         style: TextStyle(fontSize: 30.0),
-                      ),
+                      ),*/
                     ],
                   ),
                   Form(
@@ -75,7 +76,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             //Validator
                           },
                           validator: (value) {
-                            if (value!.isEmpty ) {
+                            if (value!.isEmpty) {
                               return 'Enter a valid username!';
                             }
                             return null;
@@ -105,8 +106,8 @@ class _RegisterPageState extends State<RegisterPage> {
                         const SizedBox(height: 20.0),
                         //text input
                         TextFormField(
-                          decoration:
-                          const InputDecoration(labelText: 'Password',hintText:'Password' ),
+                          decoration: const InputDecoration(
+                              labelText: 'Password', hintText: 'Password'),
                           keyboardType: TextInputType.emailAddress,
                           onFieldSubmitted: (value) {},
                           obscureText: true,
@@ -124,9 +125,8 @@ class _RegisterPageState extends State<RegisterPage> {
                           color: const Color(0xff447def),
                           child: const Text(
                             "Register",
-                            style: TextStyle(
-                              fontSize: 24.0,color: Colors.white
-                            ),
+                            style:
+                                TextStyle(fontSize: 24.0, color: Colors.white),
                           ),
                           onPressed: () => _submit(),
                         )
@@ -142,7 +142,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                       GestureDetector(
                         onTap: () {
-                           Navigator.pushNamed(context, LoginPage.id);
+                          Navigator.pushNamed(context, LoginPage.id);
                         },
                         child: const Text(
                           ' Sign In',
