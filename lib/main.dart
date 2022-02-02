@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import 'main_screen/LoginPage.dart';
@@ -18,13 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(fontFamily: 'Abel'),
       initialRoute: LoginPage.id,
       routes: {
-        //RegisterPage.id: (context) => RegisterPage(),
         LoginPage.id: (context) => LoginPage(),
-        //ForgotPassword.id: (context) => ForgotPassword(),
-        //Done.id: (context) => Done(),
       },
     );
   }
 }
-
-

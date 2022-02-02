@@ -1,7 +1,7 @@
+import 'package:authmodule/main_screen/ForgotPassPage.dart';
 import 'package:authmodule/main_screen/RegisterPage.dart';
-import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
-import 'package:modal_progress_hud/modal_progress_hud.dart';
+import 'package:modal_progress_hud/modal_progress_hud.dart' show ModalProgressHUD;
 
 bool _wrongEmail = false;
 bool _wrongPassword = false;
@@ -34,9 +34,8 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
-      body: ModalProgressHUD(
-        inAsyncCall: _showSpinner,
-        color: Colors.blueAccent,
+      body: Container(
+        color: Colors.white,
         child: Stack(
           children: [
             Align(
@@ -110,7 +109,8 @@ class _LoginPageState extends State<LoginPage> {
                           alignment: Alignment.topRight,
                           child: GestureDetector(
                             onTap: () {
-                              //Navigator.pushNamed(context, ForgotPassword.id);
+                              Navigator.pushReplacement(
+                                  context, MaterialPageRoute(builder: (context) => ForgotPassPage()));
                             },
                             child: const Text(
                               'Forgot Password?',
